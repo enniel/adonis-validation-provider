@@ -12,7 +12,7 @@ const ExtendedRules = require('../src/ExtendedRules')
 class ValidatorProvider extends ServiceProvider {
 
   * register () {
-    this.app.singleton('Adonis/Addons/Validator', function (app) {
+    this.app.bind('Adonis/Addons/Validator', function (app) {
       const validator = require('../src/Validator')
       /**
        * Wrap database unique rule inside a try/catch block
